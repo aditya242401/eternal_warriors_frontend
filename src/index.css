@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 .box-shadow-1 {
   box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.03);
+}
+
+.my-blur::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  filter: blur(1px);
+  z-index: 1;
+}
+
+.my-lock .content {
+  opacity: 0.3;
+}
+.my-lock::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/assets/images/icons/lock.svg");
+  background-size: 50px 50px;
+  opacity: 0.7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 99;
+}
+
+.my-input-file {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 99;
 }

@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import LadingPage from "./pages/LadingPage";
+import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
 import { useEffect, useState } from "react";
 import { useTheme } from "./store/useTheme";
-
+import Dashboard from "./pages/Dashboard";
+import AccountSettings from "./pages/AccountSettings";
 
 export default function App() {
   const { theme, setTheme } = useTheme();
@@ -29,8 +30,10 @@ export default function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<LadingPage />} />
+      <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/account-settings" element={<AccountSettings />} />
     </Routes>
   )
 }

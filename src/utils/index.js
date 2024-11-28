@@ -1,0 +1,3 @@
+export const APP_DATA = {
+  WALLET_PROJECT_ID: "0f5e60042fa3b0184591fab00f73a0a2",
+}
